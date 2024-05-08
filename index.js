@@ -49,8 +49,8 @@ server.on('warning', function (err) {
 
 server.on('listening', function () {
   // fired when all requested servers are listening
-  console.log('Listening on http port:' + server.http.address().port)
-  console.log('Listening on udp port:' + server.udp.address().port)
+  console.log('Listening on ws port:' + server.ws.address().port)
+  //console.log('Listening on udp port:' + server.udp.address().port)
 })
 
 // start tracker server listening! Use 0 to listen on a random free port.
