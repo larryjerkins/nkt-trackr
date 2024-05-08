@@ -8,10 +8,10 @@ var argv = require('optimist')
 var Server = require('bittorrent-tracker').Server
  
 var server = new Server({
-  udp: true, // enable udp server? [default=true]
-  http: true, // enable http server? [default=true]
+  udp: false, // enable udp server? [default=true]
+  http: false, // enable http server? [default=true]
   ws: true, // enable websocket server? [default=true]
-  stats: true, // enable web-based statistics? [default=true]
+  stats: false, // enable web-based statistics? [default=true]
   filter: function (infoHash, params, cb) {
     // Blacklist/whitelist function for allowing/disallowing torrents. If this option is
     // omitted, all torrents are allowed. It is possible to interface with a database or
@@ -28,6 +28,7 @@ var server = new Server({
  
     // In addition to returning a boolean (`true` for allowed, `false` for disallowed),
     // you can return an `Error` object to disallow and provide a custom reason.
+      cb(true);
   }
 })
 
