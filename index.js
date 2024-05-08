@@ -53,7 +53,8 @@ server.on('listening', function () {
 })
 
 // start tracker server listening! Use 0 to listen on a random free port.
-server.listen('0', argv.h)
+server.listen(10000)
+//server.listen(0, argv.h)
 
 // listen for individual tracker messages from peers:
 
