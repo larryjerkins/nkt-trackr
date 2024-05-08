@@ -9,7 +9,7 @@ var Server = require('bittorrent-tracker').Server
  
 var server = new Server({
   udp: false, // enable udp server? [default=true]
-  http: false, // enable http server? [default=true]
+  http: true, // enable http server? [default=true]
   ws: true, // enable websocket server? [default=true]
   stats: false, // enable web-based statistics? [default=true]
   filter: function (infoHash, params, cb) {
