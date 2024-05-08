@@ -1,0 +1,16 @@
+{
+  "name": "nkt-trackr",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install && mkdir -p build",
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "test": "npm run build-test"
+  },
+  "dependencies": {
+    "bittorrent-tracker": "^8.0.13",
+    "forever": "^0.15.3",
+    "optimist": "^0.6.1"
+  }
+}
